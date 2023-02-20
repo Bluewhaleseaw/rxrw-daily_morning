@@ -46,7 +46,7 @@ def get_weather():
 # 获取当前日期为星期几
 def get_week_day():
   week_list = ["星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"]
-  week_day = week_list[datetime.date(today).weekday()]
+  week_day = week_list[today.date().weekday()]
   return week_day
 
 # 纪念日正数
@@ -126,15 +126,15 @@ data = {
     "color": get_random_color()
   },
   "temperature": {
-    "value": math.floor(weather['temp']),
+    "value": format_temperature(weather['temp']),
     "color": get_random_color()
   },
   "highest": {
-    "value": math.floor(weather['high']),
+    "value": format_temperature(weather['high']),
     "color": get_random_color()
   },
   "lowest": {
-    "value": math.floor(weather['low']),
+    "value": format_temperature(weather['low']),
     "color": get_random_color()
   },
   "love_days": {
