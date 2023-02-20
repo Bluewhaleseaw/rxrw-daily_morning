@@ -32,7 +32,7 @@ if template_id is None:
   exit(422)
 
 # weather 直接返回对象，在使用的地方用字段进行调用。
-def get_weather(city):
+def get_weather():
   if city is None:
     print('请设置城市')
     return None
